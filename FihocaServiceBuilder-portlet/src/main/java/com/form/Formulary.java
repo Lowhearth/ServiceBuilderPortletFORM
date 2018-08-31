@@ -41,8 +41,7 @@ public class Formulary extends MVCPortlet {
     		Employee employee = new EmployeeImpl();
     		employee.setName((String) request.getParameter("name"));
     		employee.setAddress((String) request.getParameter("address"));
-    		
-				employee.setEid((int)CounterLocalServiceUtil.increment());
+    		employee.setEid((int)CounterLocalServiceUtil.increment());
 			
     		EmployeeLocalServiceUtil.addEmployee(employee);
     		System.out.println(employee.getAddress());

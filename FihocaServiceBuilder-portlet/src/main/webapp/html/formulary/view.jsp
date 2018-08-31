@@ -3,10 +3,6 @@
 
 <portlet:defineObjects />
 
-
-
-<portlet:defineObjects />
-
 <portlet:actionURL var="add" name="AddEmployee">
 </portlet:actionURL>
 
