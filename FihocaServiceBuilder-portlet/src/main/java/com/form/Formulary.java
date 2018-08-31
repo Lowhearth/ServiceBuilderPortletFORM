@@ -15,6 +15,7 @@ import com.liferay.counter.service.CounterLocalServiceUtil;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.util.bridges.mvc.MVCPortlet;
 import com.example.plugins.model.Employee;
 import com.example.plugins.model.impl.EmployeeImpl;
 import com.example.plugins.service.EmployeeLocalServiceUtil;
@@ -24,7 +25,7 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
 /**
  * Portlet implementation class Formulary
  */
-public class Formulary extends GenericPortlet {
+public class Formulary extends MVCPortlet {
 
     public void init() {
         viewTemplate = getInitParameter("view-template");
@@ -42,7 +43,6 @@ public class Formulary extends GenericPortlet {
     public void AddEmployee(ActionRequest request, ActionResponse response ) throws IOException, PortletException, SystemException {
     	
     		Employee employee = new EmployeeImpl();
-    	
     		employee.setName((String) request.getParameter("name"));
     		employee.setAddress((String) request.getParameter("address"));
     		employee.setEid((int)CounterLocalServiceUtil.increment());
@@ -51,9 +51,7 @@ public class Formulary extends GenericPortlet {
     		System.out.println(employee.getAddress());
     		
     	
-    	String name = (String) request.getParameter("name");
-    	String surname = (String) request.getParameter("address");
-    	System.out.println("Especific Action the name is "+ name +" " + surname);
+  
     	
 }
 
