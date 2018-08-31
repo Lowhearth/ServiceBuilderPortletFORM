@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.example.plugins.model.Employee">
+		<field name="eid" type="int" />
+		<field name="name" type="String" />
+		<field name="address" type="String" />
+	</model>
+</model-hints>

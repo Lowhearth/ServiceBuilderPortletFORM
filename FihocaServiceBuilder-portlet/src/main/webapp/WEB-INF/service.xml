@@ -1,0 +1,10 @@
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="com.example.plugins">
+	<namespace>FihocaServiceBuilder</namespace>
+    <entity name="Employee" table="employee_data" local-service="true" remote-service="false">
+        <column name="eid" type="int" id-type="increment" primary="true"></column>
+        <column name="name" type="String"></column>
+        <column name="address" type="String" db-name="employee_address"></column>
+    </entity>
+</service-builder>

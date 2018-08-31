@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.example.plugins.model.Employee" />
+	<class name="com.example.plugins.model.impl.EmployeeImpl" table="employee_data">
+		<cache usage="read-write" />
+		<id name="eid" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" column="employee_address" />
+	</class>
+</hibernate-mapping>
